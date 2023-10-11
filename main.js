@@ -1,6 +1,6 @@
-console.log('Gentlejack contant page!');
+console.log('Gentlejack contact page!');
 
-(document).ready(function () {
+$(document).ready(function() { // Corrected (document).ready(function () {
   function init() {
     if (localStorage["name"]) {
       $('#name').val(localStorage["name"]);
@@ -15,7 +15,6 @@ console.log('Gentlejack contant page!');
   init();
 });
 
-$('.stored').change(function () {
+$('.stored').change(function() {
   localStorage[$(this).attr('name')] = $(this).val();
-  
 });
